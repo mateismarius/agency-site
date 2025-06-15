@@ -41,6 +41,23 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Custom Agency Colors */
+  --color-agency-blue: var(--agency-blue);
+  --color-agency-blue-light: var(--agency-blue-light);
+  --color-agency-blue-dark: var(--agency-blue-dark);
+  --color-agency-accent: var(--agency-accent);
+  --color-agency-accent-light: var(--agency-accent-light);
+  --color-agency-accent-dark: var(--agency-accent-dark);
+  --color-agency-gray: var(--agency-gray);
+  --color-agency-gray-light: var(--agency-gray-light);
+  --color-agency-gray-dark: var(--agency-gray-dark);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-error-light: var(--error-light);
 }
 
 :root {
@@ -51,13 +68,13 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.558 0.166 264.052);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
+  --accent: oklch(0.768 0.114 85.87);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
@@ -76,6 +93,28 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Custom Agency Colors - Light Mode */
+  --agency-blue: oklch(0.558 0.166 264.052);         /* #2563eb equivalent */
+  --agency-blue-light: oklch(0.97 0.03 264.052);     /* Very light blue bg */
+  --agency-blue-dark: oklch(0.35 0.166 264.052);     /* Darker blue */
+
+  --agency-accent: oklch(0.768 0.114 85.87);         /* #fbbf24 equivalent */
+  --agency-accent-light: oklch(0.95 0.05 85.87);     /* Very light yellow bg */
+  --agency-accent-dark: oklch(0.65 0.114 85.87);     /* Darker yellow */
+
+  --agency-gray: oklch(0.5 0.02 264);                /* Neutral gray */
+  --agency-gray-light: oklch(0.98 0.005 264);        /* Almost white gray */
+  --agency-gray-dark: oklch(0.2 0.02 264);           /* Dark gray */
+
+  --success: oklch(0.55 0.15 142);                   /* Green */
+  --success-light: oklch(0.95 0.03 142);             /* Light green bg */
+
+  --warning: oklch(0.7 0.15 65);                     /* Orange */
+  --warning-light: oklch(0.95 0.03 65);              /* Light orange bg */
+
+  --error: oklch(0.577 0.245 27.325);                /* Red - using existing destructive */
+  --error-light: oklch(0.95 0.05 27.325);            /* Light red bg */
 }
 
 .dark {
@@ -110,6 +149,28 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* Custom Agency Colors - Dark Mode */
+  --agency-blue: oklch(0.65 0.166 264.052);          /* Lighter blue for dark mode */
+  --agency-blue-light: oklch(0.25 0.08 264.052);     /* Dark blue bg */
+  --agency-blue-dark: oklch(0.8 0.166 264.052);      /* Even lighter blue */
+
+  --agency-accent: oklch(0.8 0.114 85.87);           /* Lighter yellow for dark mode */
+  --agency-accent-light: oklch(0.3 0.05 85.87);      /* Dark yellow bg */
+  --agency-accent-dark: oklch(0.9 0.114 85.87);      /* Even lighter yellow */
+
+  --agency-gray: oklch(0.7 0.02 264);                /* Lighter gray for dark mode */
+  --agency-gray-light: oklch(0.25 0.02 264);         /* Dark gray bg */
+  --agency-gray-dark: oklch(0.9 0.02 264);           /* Light gray text */
+
+  --success: oklch(0.65 0.15 142);                   /* Lighter green */
+  --success-light: oklch(0.25 0.08 142);             /* Dark green bg */
+
+  --warning: oklch(0.75 0.15 65);                    /* Lighter orange */
+  --warning-light: oklch(0.3 0.08 65);               /* Dark orange bg */
+
+  --error: oklch(0.704 0.191 22.216);                /* Using existing dark destructive */
+  --error-light: oklch(0.3 0.1 22.216);              /* Dark red bg */
 }
 
 @layer base {
