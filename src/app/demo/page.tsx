@@ -1,5 +1,5 @@
 // src/app/demo/page.tsx - Updated with color system
-import { Container, Typography, Section } from '@/components/core'
+import { Typography, Section } from '@/components/core'
 import { ColorPalette } from '@/components/core/ColorPalette/ColorPalette'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
