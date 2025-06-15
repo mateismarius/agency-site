@@ -1,6 +1,6 @@
 // src/components/motion/Scale/Scale.tsx
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { ReactNode } from 'react'
 import { useInView } from '@/hooks/useInView'
 
@@ -21,9 +21,9 @@ export function Scale({
                           className = '',
                           triggerOnce = true
                       }: ScaleProps) {
-    const { ref, isInView } = useInView({ triggerOnce })
+    const { ref, isInView } = useInView<HTMLDivElement>({ triggerOnce })
 
-    const variants = {
+    const variants: Variants = {
         hidden: {
             opacity: 0,
             scale: initialScale

@@ -1,6 +1,6 @@
 // src/components/motion/StaggerItem/StaggerItem.tsx
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { ReactNode } from 'react'
 
 interface StaggerItemProps {
@@ -9,7 +9,7 @@ interface StaggerItemProps {
 }
 
 export function StaggerItem({ children, className = '' }: StaggerItemProps) {
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: {
             opacity: 0,
             y: 20

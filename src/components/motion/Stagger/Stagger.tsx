@@ -19,7 +19,7 @@ export function Stagger({
                             className = '',
                             triggerOnce = true
                         }: StaggerProps) {
-    const { ref, isInView } = useInView({ triggerOnce })
+    const { ref, isInView } = useInView<HTMLDivElement>({ triggerOnce })
 
     const containerVariants = {
         hidden: { opacity: 0 },

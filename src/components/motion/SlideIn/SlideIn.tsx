@@ -1,6 +1,6 @@
 // src/components/motion/SlideIn/SlideIn.tsx
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { ReactNode } from 'react'
 import { useInView } from '@/hooks/useInView'
 
@@ -23,9 +23,9 @@ export function SlideIn({
                             className = '',
                             triggerOnce = true
                         }: SlideInProps) {
-    const { ref, isInView } = useInView({ triggerOnce })
+    const { ref, isInView } = useInView<HTMLDivElement>({ triggerOnce })
 
-    const getVariants = () => {
+    const getVariants = ():Variants => {
         const directionMap = {
             left: { x: -distance, y: 0 },
             right: { x: distance, y: 0 },

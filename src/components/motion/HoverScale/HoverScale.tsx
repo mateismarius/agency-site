@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
 interface HoverScaleProps {
-    children: ReactNode
+    children?: ReactNode
     scale?: number
     duration?: number
     className?: string

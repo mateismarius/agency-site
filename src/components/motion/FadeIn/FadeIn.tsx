@@ -1,6 +1,6 @@
 // src/components/motion/FadeIn/FadeIn.tsx
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { ReactNode } from 'react'
 import { useInView } from '@/hooks/useInView'
 
@@ -21,7 +21,7 @@ export function FadeIn({
                        }: FadeInProps) {
     const { ref, isInView } = useInView({ triggerOnce })
 
-    const variants = {
+    const variants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
