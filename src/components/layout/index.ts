@@ -43,7 +43,6 @@ export const navigationItems = [
             }
         ]
     },
-    { name: 'Portofoliu', href: '/portofoliu' },
     { name: 'Despre Noi', href: '/despre' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
