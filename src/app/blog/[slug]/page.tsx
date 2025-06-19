@@ -12,6 +12,11 @@ import Link from "next/link";
 import {Layout} from "@/components/layout"; // ← IMPORT OBLIGATORIU
 import { Button } from '@/components/ui/button'
 
+// ==================================================
+// src/app/blog/[slug]/page.tsx - FIXED VERSION
+// ==================================================
+
+
 // Simularea bazei de date cu articole
 const articlesDB = {
     'ghid-magazin-online-succes-2024': {
@@ -86,14 +91,15 @@ const articlesDB = {
 }
 
 interface ArticlePageProps {
-    params: {
+    params: Promise<{
         slug: string
-    }
+    }>
 }
 
 // Generare metadata pentru SEO
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
-    const article = articlesDB[params.slug as keyof typeof articlesDB]
+    const { slug } = await params
+    const article = articlesDB[slug as keyof typeof articlesDB]
 
     if (!article) {
         return {
@@ -115,9 +121,11 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
 }
 
 // Componenta principală pentru articol individual
-export default function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({ params }: ArticlePageProps) {
+    const { slug } = await params
+
     // Găsește articolul după slug
-    const article = articlesDB[params.slug as keyof typeof articlesDB]
+    const article = articlesDB[slug as keyof typeof articlesDB]
 
     if (!article) {
         notFound() // Acum funcționează corect

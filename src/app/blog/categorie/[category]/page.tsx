@@ -149,18 +149,19 @@ const getArticlesForCategory = (category: string) => {
 
 // Props pentru componenta de pagină
 interface CategoryPageProps {
-    params: {
+    params: Promise<{
         category: string
-    }
-    searchParams?: {
+    }>
+    searchParams?: Promise<{
         page?: string
         sort?: string
-    }
+    }>
 }
 
 // Generare metadata dinamică
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
-    const categoryData = validCategories[params.category as keyof typeof validCategories]
+    const { category } = await params
+    const categoryData = validCategories[category as keyof typeof validCategories]
 
     if (!categoryData) {
         return {
@@ -182,16 +183,18 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 }
 
 // Componenta principală - TREBUIE să fie export default
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
+    const { category } = await params
+
     // Verifică dacă categoria există
-    const categoryData = validCategories[params.category as keyof typeof validCategories]
+    const categoryData = validCategories[category as keyof typeof validCategories]
 
     if (!categoryData) {
         notFound() // Acum funcționează corect
     }
 
     // Obține articolele pentru categoria respectivă
-    const categoryArticles = getArticlesForCategory(params.category)
+    const categoryArticles = getArticlesForCategory(category)
 
     return (
         <Layout>
