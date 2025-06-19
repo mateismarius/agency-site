@@ -197,7 +197,7 @@ export default function BlogSearchPage() {
                         </div>
                     </div>
 
-                    {/* Applied Filters */}
+                    {/* Applied Filters ....*/}
                     {appliedFilters.length > 0 && (
                         <div className="flex flex-wrap items-center gap-2 mb-6">
                             <Typography variant="small" className="text-agency-gray">
