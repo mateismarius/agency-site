@@ -180,7 +180,7 @@ export default function BlogSearchPage() {
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                         <div>
                             <Typography variant="body" className="text-agency-gray">
-                                <strong>{resultCount} rezultate</strong> găsite pentru &#34;{searchQuery}&#34; în {searchTime} secunde
+                                <strong>{resultCount} rezultate</strong> găsite pentru &quot;{searchQuery}&quot; în {searchTime} secunde
                             </Typography>
                         </div>
 
@@ -431,7 +431,7 @@ export default function BlogSearchPage() {
                         </div>
 
                         <Typography variant="h3" className="text-agency-blue-dark mb-4">
-                            Nu am găsit rezultate pentru &#34;{searchQuery}&#34;
+                            Nu am găsit rezultate pentru &quot;{searchQuery}&quot;
                         </Typography>
 
                         <Typography variant="body" className="text-agency-gray mb-8">
