@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { Layout } from '@/components/layout'
 import { Typography, Section, Container } from '@/components/core'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
     ArrowRight,
@@ -11,7 +11,6 @@ import {
     Target,
     Users,
     Award,
-    Clock,
     Code2,
     Palette,
     TrendingUp,

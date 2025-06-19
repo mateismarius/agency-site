@@ -1,7 +1,7 @@
 // src/app/contact/page.tsx - Pagina Contact
 import { Metadata } from 'next'
 import { Layout } from '@/components/layout'
-import { Typography, Section, Container } from '@/components/core'
+import { Typography, Section} from '@/components/core'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -18,8 +18,6 @@ import {
     ArrowRight,
     Zap,
     Shield,
-    Heart,
-    Star,
     Coffee,
     Users,
     Globe,
